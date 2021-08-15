@@ -1,4 +1,3 @@
-# svelte-bacic
 
 ## svelte app
 
