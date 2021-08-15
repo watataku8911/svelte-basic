@@ -1,5 +1,3 @@
-# svelte-bacic
-
 ## svelte app
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
@@ -11,8 +9,7 @@ npx degit sveltejs/template svelte-app
 cd svelte-app
 ```
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
+_Note that you will need to have [Node.js](https://nodejs.org) installed._
 
 ### Get started
 
@@ -36,4 +33,22 @@ To create an optimised version of the app:
 ```bash
 npm run build
 ```
+
+### clickEvent
+
+```
+<script>
+	const messages = ['Hello!', 'Svelte!'];
+	let current = 0;
+
+	const toggle = () => current = (current+1) % 2;
+</script>
+
+<main>
+	{messages[current]}
+	<button on:click={toggle}>Toggle Message</button>
+</main>
+
+<style>
+</style>
 ```
