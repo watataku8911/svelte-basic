@@ -81,3 +81,21 @@ On the other hand, in the parent component, please rewrite as follows
 <style>
 </style>
 ```
+
+### Binding
+
+```
+<script>
+  let name = '';
+</script>
+
+<main>
+  <input placeholder="Enter your name" bind:value={name}>
+  <div>Hello, {name}</div>
+</main>
+
+<style>
+</style>
+```
+
+The name variable is associated with the input element using bind: value. Now, if the input value of the input element changes, the name variable will also change.
