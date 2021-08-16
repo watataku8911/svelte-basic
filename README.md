@@ -99,3 +99,53 @@ On the other hand, in the parent component, please rewrite as follows
 ```
 
 The name variable is associated with the input element using bind: value. Now, if the input value of the input element changes, the name variable will also change.
+
+### if & for
+
+- if
+
+The start is {#if condition} and the end is {/ if}. else puts {: else} in between, and else-if puts {: else if condition} in between.
+
+```
+<script>
+  let checked = false;
+</script>
+
+<main>
+  <label>
+    <input type="checkbox" bind:checked={checked}>
+    Check Me!
+  </label>
+  {#if checked}
+    <div>Checked!</div>
+  {:else}
+    <div>Hurry!</div>
+  {/if}
+</main>
+
+<style>
+</style>
+```
+
+- for
+
+The iterative process is sandwiched between {#each array as item} and {/ each}.
+
+```
+<script>
+  const persons = [
+    { name: 'Alice' },
+    { name: 'Bob'},
+    { name: 'Carol' }
+  ];
+</script>
+
+<main>
+  {#each persons as p}
+    <div>{p.name}</div>
+  {/each}
+</main>
+
+<style>
+</style>
+```
