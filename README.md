@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 4058d597d73754e2efc4beb35c0a448613ac118d
 ## svelte app
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
@@ -37,7 +33,6 @@ To create an optimised version of the app:
 ```bash
 npm run build
 ```
-<<<<<<< HEAD
 
 ### clickEvent
 
@@ -202,6 +197,4 @@ Modify `App.svelte`.
 	<button on:click={onClickSecoundPage}>Secound page</button>
   <Router routes={routes} />
 </main>
-=======
->>>>>>> 4058d597d73754e2efc4beb35c0a448613ac118d
 ```
