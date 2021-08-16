@@ -149,3 +149,52 @@ The iterative process is sandwiched between {#each array as item} and {/ each}.
 <style>
 </style>
 ```
+
+### Routing
+
+```
+$ npm install svelte-spa-router
+```
+
+#### Creating a routing definition
+
+Create a correspondence of which component is tied to which routing.
+Create `router / index.js` under the `src` folder.
+
+```
+import Basic from "../pages/Basic.svelte";
+import SecoundBasic from "../pages/SecoundBasic.svelte";
+
+export const routes = {
+  "/": Basic,
+  "/secound": SecoundBasic,
+};
+```
+
+#### Creating a Router View
+
+After defining the route, let's draw the defined route.
+Modify `App.svelte`.
+
+```
+<script>
+  import Router, {push} from 'svelte-spa-router'
+	import { routes } from './router'
+
+	const onClickBasic = () => {
+		push("/");
+	}
+
+	const onClickSecoundPage = () => {
+		push("/secound");
+	}
+
+
+</script>
+
+<main>
+	<button on:click={onClickBasic}>Basic</button>
+	<button on:click={onClickSecoundPage}>Secound page</button>
+  <Router routes={routes} />
+</main>
+```
